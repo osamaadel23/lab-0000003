@@ -8,3 +8,9 @@ jobs:
         run: echo "Hello World!"
       - name: my-step-number-2
         run: echo "Hello Github!"
+ my-linked-job:
+    runs-on: ubuntu-latest
+    needs: my-job    
+    steps:
+      - name: my-linked-step
+        run: echo "This is my linked work!"
