@@ -7,4 +7,13 @@ jobs:
       - name: my-step
         run: echo "Hello World!"
       - name: my-step-number-2
+        run: echo "Hello Github!" 
+  add-my-work:
+    runs-on: ubuntu-latest
+    needs: my-job
+    steps:
+      - name: new_step
+        run: echo "Hello World!"
+      - name: my-step-number-2
         run: echo "Hello Github!"
+    
