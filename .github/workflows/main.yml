@@ -8,3 +8,10 @@ jobs:
         run: echo "Hello World!"
       - name: my-step-number-2
         run: echo "Hello Github!"
+  my-2-job:
+     needs: my-job
+     runs-on: ubuntu-latest
+     steps:
+      - name: my-first-step
+        run: echo "this is my second job"
+     
